@@ -117,12 +117,12 @@ input:focus {
     background-color: aqua;
 }
 
-footer {
+/*footer {
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: rgb(235, 235, 235);
-}
+}*/
 
 .game-title {
     font-size: 14px;
