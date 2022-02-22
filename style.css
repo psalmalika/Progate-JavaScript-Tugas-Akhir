@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    margin-top: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: #333E4F;
+    height: 67px;
+    display: flex;
+    align-items: center;
+}
+
+#head {
+    font-size: 18px;
+    color: white;
+}
+
+#main {
+    background-color: #3B4D68;
+    height: 345px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 48px;
+    color: white;
+    margin-bottom: 31px;
+}
+
+#search {
+    display: flex;
+    justify-content: center;
+}
+
+#search-bar {
+    display: flex;
+    margin: 10px 5px;
+    background-color: rgb(255, 255, 255);
+    width:491px;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.fa-magnifying-glass {
+    position: relative;
+    top: 2px;
+    margin-right: 12px;
+    color: #D7D7D7;
+}
+
+.search-input{
+    border: 0px;
+    width: 500px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#search-button {
+    margin: 10px 5px;
+    border: 0px;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E07B1E;
+    color: white;
+    width: 120px;
+}
+
+#search-button:hover {
+    background-color: #be5010;
+    cursor: pointer;
+}
+
+#search-result {
+    text-align: center;
+}
+
+#search-result-container {
+    padding: 30px;
+}
+
+#result {
+    font-size: 28px;
+    margin-top: 20px;
+    color: #3B4D68;
+}
+
+#result-container {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+
+}
+
+#result-container p {
+    display: block;
+}
+
+.game-card {
+    background-color: aqua;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+}
+
+.game-title {
+    font-size: 14px;
+    font-color: black;
+}
