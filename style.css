@@ -5,8 +5,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 header {
-    background-color: #333E4F;
+    background-color: #1b304e;
     height: 67px;
     display: flex;
     align-items: center;
@@ -15,10 +21,12 @@ header {
 #head {
     font-size: 18px;
     color: white;
+    margin-left: 40px;
 }
 
+/*Gradasi dari https://cssgradient.io/*/
 #main {
-    background-color: #3B4D68;
+    background: linear-gradient(353deg, rgba(14,42,89,1) 0%, rgba(43,89,134,1) 76%);  
     height: 345px;
     text-align: center;
     display: flex;
@@ -31,11 +39,17 @@ header {
     padding: 20px;
 }
 
-h1 {
+ {
     font-weight: 600;
     font-size: 48px;
     color: white;
     margin-bottom: 31px;
+}
+
+#title {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 20px;
 }
 
 #search {
@@ -48,24 +62,36 @@ h1 {
     margin: 10px 5px;
     background-color: rgb(255, 255, 255);
     width:491px;
-    padding: 10px 15px;
+    padding: 1px 15px;
     border-radius: 20px;
+    align-items: center;
 }
 
 .fa-magnifying-glass {
-    position: relative;
-    top: 2px;
     margin-right: 12px;
     color: #D7D7D7;
 }
 
 .search-input{
     border: 0px;
+    border-right: 2px solid #D7D7D7;
     width: 500px;
+    height: 60%;
+    margin-right: 10px;
 }
 
 input:focus {
     outline: none;
+}
+
+#filter {
+    border-style: none;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+}
+
+#filter:hover {
+    cursor: pointer;
 }
 
 #search-button {
@@ -74,13 +100,14 @@ input:focus {
     border-radius: 50px;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #E07B1E;
+    background-color: #e07b1e;
     color: white;
     width: 120px;
+    transition: 0.5s;
 }
 
 #search-button:hover {
-    background-color: #be5010;
+    background-color: #c76317;
     cursor: pointer;
 }
 
@@ -92,29 +119,63 @@ input:focus {
     padding: 30px;
 }
 
-#result {
-    font-size: 28px;
-    margin-top: 20px;
-    color: #3B4D68;
-}
-
-#result-container {
-    padding: 40px;
+#amiibo-div {
     display: flex;
     flex-wrap: wrap;
-    align-items: space-between;
+    align-content: space-between;
     justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 1000px;
+}
+
+#search-result-container {
     margin: 0 auto;
     max-width: 1200px;
 
 }
 
-#result-container p {
-    display: block;
+/* Desain card terinspirasi dari https://codepen.io/drehimself/pen/QNXpyp */
+.amiibo-card {
+    background-color: rgb(255, 255, 255);
+    // padding: 20px;
+    margin: 60px 20px 20px 20px;
+    width: 250px;
+    display: inline-block;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgb(202, 202, 202);
+    position: relative;
 }
 
-.game-card {
-    background-color: aqua;
+.card-background {
+    height: 270px;
+    background: linear-gradient(353deg, rgba(214,84,18,1) 0%, rgba(224,123,30,1) 60%); 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.amiibo-image {
+    height: 300px;
+    display: inline-block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: -40px;
+}
+
+.amiibo-details {
+    margin: 30px 0px;
+}
+
+.amiibo-name {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.amiibo-details p {
+    font-size: 12px;
 }
 
 /*footer {
@@ -123,8 +184,3 @@ input:focus {
     justify-content: center;
     background-color: rgb(235, 235, 235);
 }*/
-
-.game-title {
-    font-size: 14px;
-    font-color: black;
-}
