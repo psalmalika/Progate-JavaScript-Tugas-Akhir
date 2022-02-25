@@ -33,10 +33,148 @@ header {
     justify-content: center;
     align-items: center;
     padding: 80px 0px;
+    overflow: hidden;
 }
 
 .container {
     padding: 20px;
+}
+
+#main-image-container {
+    position: absolute;
+    height: 504px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    /* background-color: rgb(0, 0, 0)15, 15, 15);
+    opacity: 0.4; */
+}
+
+.main-amiibo {
+    position: absolute;
+}
+
+#mario-amiibo {
+    height: 600px;
+    bottom: -160px;
+    right: 200px;
+}
+
+#megaman-amiibo {
+    height: 780px;
+    bottom: -330px;
+    left: 150px;
+}
+
+#dk-amiibo {
+    height: 500px;
+    bottom: -140px;
+    left: -30px;
+}
+
+#kirby-amiibo {
+    height: 400px;
+    bottom: -140px;
+    right: -60px;
+}
+
+@media (max-width: 1920px) {
+    #mario-amiibo {
+        height: 600px;
+        bottom: -160px;
+        right: 200px;
+    }
+    
+    #megaman-amiibo {
+        height: 780px;
+        bottom: -330px;
+        left: 150px;
+    }
+    
+    #dk-amiibo {
+        height: 500px;
+        bottom: -140px;
+        left: -30px;
+    }
+
+    #kirby-amiibo {
+        height: 400px;
+        bottom: -140px;
+        right: -60px;
+    }
+}
+
+@media (max-width: 1778px) {
+    #mario-amiibo {
+        height: 600px;
+        bottom: -160px;
+        right: 100px;
+    }
+    
+    #megaman-amiibo {
+        height: 780px;
+        bottom: -330px;
+        left: 50px;
+    }
+    
+    #dk-amiibo {
+        height: 500px;
+        bottom: -140px;
+        left: -50px;
+    }
+
+    #kirby-amiibo {
+        height: 400px;
+        bottom: -140px;
+        right: -80px;
+    }
+}
+
+/* Mobile devices
+
+iPads, tablets
+@media (min-width: 688px) {
+    #mario-amiibo {
+        opacity: 1;
+        right: 10%;
+        bottom: -190px;
+        height: 600px;
+    }
+    body {
+        background-color: red;
+    }
+}
+
+Small screens, laptops
+@media (min-width: 992px) {
+    #mario-amiibo {
+        opacity: 1;
+        height: 600px;
+        bottom: -200px;
+        right: -5%;
+    }
+    body {
+        background-color: blue;
+    }
+}
+
+Desktops, large screens
+@media (min-width: 1312px) {
+    #mario-amiibo {
+        opacity: 1;
+        bottom: -200px;
+        height: 600px;
+        left: 80%;
+    }
+    body {
+        background-color: purple;
+    }
+} */
+
+
+
+.main-container {
+    z-index: 1;
 }
 
 #title {
@@ -95,7 +233,7 @@ input:focus {
     padding: 10px 20px;
     background-color: #e07b1e;
     color: white;
-    width: 120px;
+    width: 150px;
     transition: 0.2s;
 }
 
@@ -197,7 +335,7 @@ input:focus {
 .amiibo-page {
     background: linear-gradient(353deg, rgba(214,84,18,1) 0%, rgba(224,123,30,1) 60%);
     width: 500px;
-    height: 800px;
+    height: 770px;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -227,7 +365,15 @@ input:focus {
     color: white;
 }
 
-.amiibo-page-image-container {
+.amiibo-page {
+    display: none;
+}
+
+.show-amiibo-page {
+    visibility: visible;
+}
+
+#amiibo-page-image-container {
     width: 500px;
     height: 400px;
     display: block;
@@ -236,28 +382,38 @@ input:focus {
     border-radius: 20px 20px 70px 70px;
 }
 
-.amiibo-page-image {
+.page-title {
+    color: rgb(59, 59, 59);
+    font-weight: 600;
+}
+
+#amiibo-page-image {
     position: relative;
     bottom: 40px;
 }
 
-.amiibo-page-details {
+#amiibo-page-details {
     box-sizing: border-box;
     padding: 30px 50px;
     background-color: white;
-    height: 400px;
+    height: 370px;
     border-radius: 60px 60px 20px 20px;
 }
 
-.amiibo-page-name {
+#amiibo-page-name {
     font-size: 28px; 
     /*background: grey;*/
     text-align: center;
 }
 
-.amiibo-page-details-more {
+#amiibo-page-details-more {
     margin-top: 20px;
     /*background:rgb(228, 228, 228);*/
+}
+
+#amiibo-page-list {
+    position: relative;
+    left: 20px;
 }
 
 /*footer {
