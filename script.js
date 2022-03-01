@@ -29,25 +29,24 @@ const getAmiibo = async () => {
 };
 
 const findAmiibo = async() => {
-    const keywordInput = document.getElementById('keyword-input').value;
+    const keywordInput = document.getElementById('keyword-input').value.trim().toLowerCase();
     let allAmiibo = await getAmiibo(keywordInput);
     let filter = document.getElementById('filter').value;
 
     /*console.log(filter);*/
 
     /*console.log('Filtered Amiibo result:');*/
-    /* const ke let, declare secara global */
     filteredAmiibo = allAmiibo.amiibo.filter(amiibo => {
             if (filter == 'name'){
-                return amiibo.name.includes(keywordInput);
+                return amiibo.name.trim().toLowerCase().includes(keywordInput);
             } else if (filter == 'character') {
-                return amiibo.character.includes(keywordInput);
+                return amiibo.character.trim().toLowerCase().includes(keywordInput);
             } else if (filter == 'amiiboSeries') {
-                return amiibo.amiiboSeries.includes(keywordInput);
+                return amiibo.amiiboSeries.trim().toLowerCase().includes(keywordInput);
             } else if (filter == 'gameSeries') {
-                return amiibo.gameSeries.includes(keywordInput);
+                return amiibo.gameSeries.split(" ").join("").toLowerCase().includes(keywordInput);
             } else {
-                return amiibo.character.includes(keywordInput) || amiibo.name.includes(keywordInput) || amiibo.gameSeries.includes(keywordInput) || amiibo.amiiboSeries.includes(keywordInput);
+                return amiibo.character.trim().toLowerCase().includes(keywordInput) || amiibo.name.trim().toLowerCase().includes(keywordInput) || amiibo.gameSeries.trim().toLowerCase().includes(keywordInput) || amiibo.amiiboSeries.trim().toLowerCase().includes(keywordInput);
             };
         });
     /*console.log(filteredAmiibo);*/
@@ -65,7 +64,7 @@ const findAmiibo = async() => {
 };
 
 const displayAmiibo = (amiibos) => {
-    let listOfAmiibo = ""
+    let listOfAmiibo = "";
     for (let i = 0; i < amiibos.length; i++) {
         const amiibo = amiibos[i];
         /*console.log(amiibo);*/
